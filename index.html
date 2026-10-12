@@ -3,272 +3,307 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Francesco · Control systems for space telescopes</title>
-  <meta name="description" content="Mechanical engineering master's student at Politecnico di Milano, researching active wavefront control for space telescopes at NASA's Jet Propulsion Laboratory.">
-  <meta name="theme-color" content="#eef1fb">
+  <title>Francesco Pisacane · Mechatronics and robotics engineer</title>
+  <meta name="description" content="Francesco Pisacane: MSc student in Mechatronics and Robotics at Politecnico di Milano. Control systems, robotics, reinforcement learning and research at NASA JPL.">
+  <meta name="theme-color" content="#f6f6f7">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5' fill='%237c8cf8'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111318'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='%23f6f6f7'/%3E%3C/svg%3E">
 </head>
 <body>
-  <div class="backdrop" aria-hidden="true">
-    <span class="orb orb-a"></span>
-    <span class="orb orb-b"></span>
-    <span class="orb orb-c"></span>
-  </div>
-
-  <header class="nav-wrap">
-    <nav class="nav" aria-label="Main">
-      <a class="nav-brand" href="#top">Francesco</a>
-      <ul class="nav-links">
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top">Francesco Pisacane</a>
+    <nav aria-label="Main">
+      <ul class="menu">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#beyond">Beyond the lab</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a class="nav-cta" href="#contact">Contact</a></li>
+        <li><a href="#contact" class="menu-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="top">
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-copy">
-        <h1>I design the control systems that keep space telescopes perfectly still.</h1>
+        <h1>Control, robotics and autonomy for machines that move.</h1>
         <p class="lead">
-          I'm Francesco, a mechanical engineering master's student at Politecnico di Milano.
-          I did my thesis at NASA's Jet Propulsion Laboratory, working on active wavefront control
-          for the mirror of a future space observatory.
+          I'm Francesco, a Mechatronics and Robotics master's student at Politecnico di Milano.
+          I carried out my thesis research at NASA's Jet Propulsion Laboratory and I like problems
+          where models, algorithms and hardware have to agree.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#projects">See my work</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <div class="actions">
+          <a class="btn btn-dark" href="#projects">View projects</a>
+          <a class="btn btn-line" href="#contact">Contact me</a>
         </div>
       </div>
-
-      <figure class="mirror" aria-label="A segmented telescope mirror whose segments align themselves">
-        <svg id="mirror-svg" viewBox="-260 -260 520 520" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="seg-a" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#9aa7ff"/>
-              <stop offset="1" stop-color="#c9b8ff"/>
-            </linearGradient>
-            <linearGradient id="seg-b" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#8fe3cf"/>
-              <stop offset="1" stop-color="#a9c8ff"/>
-            </linearGradient>
-            <linearGradient id="seg-c" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#ffc9b5"/>
-              <stop offset="1" stop-color="#e9b8ff"/>
-            </linearGradient>
-          </defs>
-          <g id="segments"></g>
-        </svg>
-        <figcaption>Every segment finds its place. That's the job.</figcaption>
-      </figure>
+      <div class="stage" id="stage">
+        <canvas id="hero-canvas" aria-label="3D segmented mirror. Move the pointer to tilt it, scroll to pull the segments apart." role="img"></canvas>
+      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <!-- About -->
+    <section class="sec" id="about">
       <h2>About</h2>
-      <div class="about-grid">
-        <div class="prose">
-          <p>
-            I'm drawn to the place where mechanics, control and real hardware meet.
-            My bachelor's in Automation and Control Engineering taught me the theory;
-            my master's, on the mechatronics and robotics track, is where I learned
-            to make it work on a bench.
-          </p>
-          <p>
-            My thesis lives on IRIS, a testbed connected to NASA's Habitable Worlds Observatory.
-            I work on piezoelectric actuators, telescope control elements and the rigid body
-            control system that holds a segmented mirror in alignment, down to the nanometre scale.
-          </p>
-          <p>
-            Away from the lab I build things with Arduino, shoot photos and drone video,
-            and walk up mountains whenever I can.
-          </p>
-        </div>
-        <aside class="now">
-          <h3>Right now</h3>
-          <dl>
-            <div><dt>Studying</dt><dd>Mechanical Engineering, Politecnico di Milano</dd></div>
-            <div><dt>Research</dt><dd>Active wavefront control at JPL, mentored by Dr. Quadrelli</dd></div>
-            <div><dt>Programme</dt><dd>IDEA League Challenge Programme, 2025–2026</dd></div>
-            <div><dt>Learning</dt><dd>ROS 2 for autonomous vehicles</dd></div>
-          </dl>
-        </aside>
+      <div class="sec-body prose">
+        <p>
+          I study Mechatronics and Robotics at Politecnico di Milano, after a bachelor's in
+          Automation and Control Engineering. My work sits between control theory, learning-based
+          methods and real robots: state estimation, system identification, SLAM,
+          reinforcement learning and reduced-order modelling.
+        </p>
+        <p>
+          In 2025–2026 I spent a semester at Ghent University, took part in the IDEA League
+          Challenge Programme with study periods at ETH Zurich, TU Delft, RWTH Aachen and Chalmers,
+          and then moved to NASA JPL in Pasadena for seven months of research.
+        </p>
+        <p>
+          Outside university I fly a custom-built drone, shoot aerial video for real estate agencies,
+          and hike whenever the weather allows it.
+        </p>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <!-- Experience -->
+    <section class="sec" id="experience">
+      <h2>Experience</h2>
+      <div class="sec-body">
+        <ol class="rows">
+          <li class="row">
+            <p class="when">Mar 2026 – Sep 2026<br>Pasadena, CA</p>
+            <div>
+              <h3>Visiting Student Researcher, NASA Jet Propulsion Laboratory</h3>
+              <p>
+                Selected for a seven-month research period to develop my master's thesis on modelling,
+                dynamics and control of distributed planetary vehicles. The period was funded by the
+                Carlo Sacchi Future Talent Award.
+              </p>
+              <p>
+                I also worked on active wavefront control for a segmented space-telescope mirror: rigid
+                body control and piezoelectric actuator compensation on the IRIS testbed, linked to the
+                Habitable Worlds Observatory.
+              </p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when">Since 2024</p>
+            <div>
+              <h3>Junior Enterprise Milano Politecnico (JEMP)</h3>
+              <p>Member of the audit team, supporting internal process evaluation and quality assurance.</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when">Since 2021</p>
+            <div>
+              <h3>Automation Engineering Association (AEA)</h3>
+              <p>Member of the project team, contributing to student-led technical initiatives.</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when">Independent</p>
+            <div>
+              <h3>Aerial photography with drones</h3>
+              <p>I designed and built my own drone and capture aerial videos for real estate agencies.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="sec" id="projects">
       <h2>Projects</h2>
-      <p class="section-intro">Research first, then the projects I built with classmates and on my own.</p>
+      <div class="sec-body">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="control" aria-pressed="false">Control</button>
+          <button class="chip" data-filter="robotics" aria-pressed="false">Robotics</button>
+          <button class="chip" data-filter="ai" aria-pressed="false">AI and learning</button>
+          <button class="chip" data-filter="structures" aria-pressed="false">Structures</button>
+        </div>
 
-      <div class="projects">
-        <article class="project project-feature">
-          <div class="project-head">
-            <h3>Active wavefront control for a segmented space telescope</h3>
-            <span class="project-meta">Master's thesis · NASA JPL</span>
-          </div>
-          <p>
-            A control pipeline for the rigid body control system of a segmented mirror on the IRIS testbed.
-            It combines hysteresis and creep compensation for piezoelectric actuators with model-based
-            control, so the mirror holds its shape despite the actuators' nonlinear behaviour.
-          </p>
-          <ul class="tags">
-            <li>RBCS</li><li>Piezoelectric actuators</li><li>Hysteresis compensation</li><li>MPC</li><li>MATLAB / Simulink</li>
-          </ul>
-        </article>
+        <div class="grid" id="grid">
+          <article class="card card-wide" data-tilt data-cat="control robotics">
+            <h3>Distributed planetary vehicles</h3>
+            <p>Master's thesis at NASA JPL on the modelling, dynamics and control of distributed planetary vehicles.</p>
+            <ul class="tags"><li>Control</li><li>Dynamics</li><li>Thesis</li></ul>
+          </article>
 
-        <article class="project">
-          <div class="project-head">
+          <article class="card card-wide" data-tilt data-cat="control">
+            <h3>Active wavefront control for a segmented telescope</h3>
+            <p>Rigid body control and hysteresis compensation for piezoelectric actuators on the IRIS testbed, for the Habitable Worlds Observatory.</p>
+            <ul class="tags"><li>RBCS</li><li>Piezo actuators</li><li>MPC</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="ai robotics">
+            <h3>Multi-agent reinforcement learning for swarms</h3>
+            <p>A decentralised RL framework for multi-agent coordination in dynamic environments.</p>
+            <ul class="tags"><li>MARL</li><li>Swarm</li><li>Python</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="robotics ai">
+            <h3>SLAM and vision for autonomous object search</h3>
+            <p>A ROS 2 system on a TurtleBot4 combining SLAM, navigation and YOLO detection to find objects in unknown environments.</p>
+            <ul class="tags"><li>ROS 2</li><li>SLAM</li><li>YOLO</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="control">
+            <h3>Bayesian optimisation for PID tuning</h3>
+            <p>Tuned PID gains and estimated link masses of a 7-DOF robotic arm in MATLAB, reaching 10<sup>−4</sup> relative error.</p>
+            <ul class="tags"><li>MATLAB</li><li>Bayesian optimisation</li><li>7-DOF arm</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="control robotics">
+            <h3>Self-balancing robot</h3>
+            <p>A two-wheeled robot on Arduino, with a Kalman filter for tilt estimation and a PID controller for the motors.</p>
+            <ul class="tags"><li>Arduino</li><li>Kalman filter</li><li>PID</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="control">
             <h3>Rotary inverted pendulum</h3>
-            <span class="project-meta">University group project</span>
-          </div>
-          <p>
-            Dynamic model, swing-up and stabilisation of a Furuta pendulum, with a
-            comparison between the model and the physical setup.
-          </p>
-          <ul class="tags"><li>Nonlinear dynamics</li><li>State feedback</li><li>Lab hardware</li></ul>
-        </article>
+            <p>Dynamic model and control of a Furuta pendulum, validated against the physical setup.</p>
+            <ul class="tags"><li>Nonlinear dynamics</li><li>Lab hardware</li></ul>
+          </article>
 
-        <article class="project">
-          <div class="project-head">
+          <article class="card" data-tilt data-cat="robotics">
             <h3>Manta, a biomimetic underwater robot</h3>
-            <span class="project-meta">University group project</span>
-          </div>
-          <p>
-            A manta-ray inspired swimmer: CAD of the flapping fins and the control strategy
-            that drives them.
-          </p>
-          <ul class="tags"><li>CAD</li><li>Bio-inspired robotics</li><li>Control</li></ul>
-        </article>
+            <p>CAD and control of a manta-ray inspired swimmer, developed as a group project.</p>
+            <ul class="tags"><li>CAD</li><li>Bio-inspired</li></ul>
+          </article>
 
-        <article class="project">
-          <div class="project-head">
+          <article class="card" data-tilt data-cat="ai">
+            <h3>PPO for battery optimisation</h3>
+            <p>A Proximal Policy Optimization agent that schedules charge and discharge in a household with photovoltaics, cutting costs under dynamic pricing.</p>
+            <ul class="tags"><li>PPO</li><li>Energy</li><li>Python</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="ai robotics">
+            <h3>LLM for high-level robot arm control</h3>
+            <p>A Python framework using large language models as zero-shot planners, inspired by SayCan, that turns natural language into executable robot actions.</p>
+            <ul class="tags"><li>LLM</li><li>SayCan</li><li>Affordances</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="structures ai">
+            <h3>Model order reduction with POD-NN</h3>
+            <p>A reduced-order model for inverse leak detection in a fluid-dynamic system, 220 times faster than the full FEM simulation.</p>
+            <ul class="tags"><li>POD</li><li>Neural networks</li><li>FEM</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="structures">
+            <h3>Experimental modal analysis for FEM validation</h3>
+            <p>Validated finite element results against experimental modal analysis using MATLAB and Abaqus.</p>
+            <ul class="tags"><li>Modal analysis</li><li>Abaqus</li><li>System identification</li></ul>
+          </article>
+
+          <article class="card" data-tilt data-cat="robotics">
             <h3>Autonomous vehicles with ROS 2</h3>
-            <span class="project-meta">In progress</span>
-          </div>
-          <p>
-            Course project on the ROS 2 stack for autonomous vehicles, built on a dual-boot
-            Ubuntu setup.
-          </p>
-          <ul class="tags"><li>ROS 2</li><li>Autonomous driving</li></ul>
-        </article>
+            <p>Course project on the ROS 2 stack for autonomous vehicles. In progress.</p>
+            <ul class="tags"><li>ROS 2</li><li>Autonomous driving</li></ul>
+          </article>
+        </div>
+
+        <p class="more"><a href="https://github.com/FrancescoPisacane" rel="noopener">More code on GitHub</a></p>
       </div>
     </section>
 
-    <!-- BEYOND THE LAB -->
-    <section id="beyond" class="section">
-      <h2>Beyond the lab</h2>
-      <p class="section-intro">What I do when I'm not writing control laws.</p>
-
-      <div class="bento">
-        <article class="tile tile-drone">
-          <div class="tile-body">
-            <h3>Drone video</h3>
-            <p>Aerial footage with a DJI Neo 2, from mountain ridges to road trips.</p>
-          </div>
-        </article>
-
-        <article class="tile tile-estate">
-          <div class="tile-body">
-            <h3>Real estate for agencies</h3>
-            <p>Photo and video of homes for real estate agencies, shot to make a space feel as good as it is.</p>
-          </div>
-        </article>
-
-        <article class="tile tile-photo">
-          <div class="tile-body">
-            <h3>Photography</h3>
-            <p>Landscapes, travel and quiet details.</p>
-          </div>
-        </article>
-
-        <article class="tile tile-hike">
-          <div class="tile-body">
-            <h3>Hiking</h3>
-            <p>Long days on trails, with a camera in the bag.</p>
-          </div>
-        </article>
-
-        <article class="tile tile-arduino">
-          <div class="tile-body">
-            <h3>Arduino projects</h3>
-            <p>Small electronics builds where I test ideas quickly, long before they become coursework.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" class="section">
-      <h2>CV</h2>
-      <div class="cv-grid">
-        <ol class="timeline">
-          <li>
-            <h3>Visiting Student Researcher, NASA JPL</h3>
-            <p class="when">2026</p>
-            <p>Master's thesis on active wavefront control and rigid body control for space telescopes, on the IRIS testbed linked to the Habitable Worlds Observatory.</p>
+    <!-- Education -->
+    <section class="sec" id="education">
+      <h2>Education</h2>
+      <div class="sec-body">
+        <ol class="rows">
+          <li class="row">
+            <p class="when">Sep 2024 – present</p>
+            <div>
+              <h3>Politecnico di Milano</h3>
+              <p>MSc in Mechatronics and Robotics, Mechanical Engineering. GPA 29.9/30.</p>
+            </div>
           </li>
-          <li>
-            <h3>IDEA League Challenge Programme</h3>
-            <p class="when">2025–2026</p>
-            <p>Honours programme with a merit scholarship and study periods at ETH Zurich, TU Delft, RWTH Aachen and Chalmers.</p>
+          <li class="row">
+            <p class="when">Sep 2025 – Jan 2026</p>
+            <div>
+              <h3>Ghent University</h3>
+              <p>Exchange programme in Electromechanical Engineering.</p>
+            </div>
           </li>
-          <li>
-            <h3>MSc Mechanical Engineering, Politecnico di Milano</h3>
-            <p class="when">Mechatronics and robotics track</p>
-            <p>Control, robotics and embedded systems, with a thesis carried out abroad.</p>
+          <li class="row">
+            <p class="when">Sep 2021 – Jul 2024</p>
+            <div>
+              <h3>Politecnico di Milano</h3>
+              <p>BSc in Automation and Control Engineering. Final grade 101/110.</p>
+            </div>
           </li>
-          <li>
-            <h3>Exchange in Electromechanical Engineering, Ghent University</h3>
-            <p class="when">During the bachelor's</p>
-            <p>A semester in Belgium focused on electromechanical systems.</p>
-          </li>
-          <li>
-            <h3>BSc Automation and Control Engineering, Politecnico di Milano</h3>
-            <p class="when">Bachelor's degree</p>
-            <p>Foundations in control theory, signals and systems.</p>
+          <li class="row">
+            <p class="when">Sep 2016 – Jul 2021</p>
+            <div>
+              <h3>Liceo Scientifico Galileo Ferraris, Varese</h3>
+              <p>High school diploma in applied sciences. Final grade 97/100.</p>
+            </div>
           </li>
         </ol>
 
-        <aside class="cv-side">
-          <h3>Skills</h3>
-          <ul class="tags tags-soft">
-            <li>Control systems</li><li>MPC</li><li>MATLAB</li><li>Simulink</li><li>Piezoelectric actuation</li>
-            <li>ROS 2</li><li>Arduino</li><li>CAD</li><li>Video editing</li><li>Drone piloting</li>
-          </ul>
-          <h3>Languages</h3>
-          <p>Italian (native), English</p>
-          <a class="btn btn-solid" href="assets/cv.pdf" download>Download CV</a>
-        </aside>
+        <h3 class="subhead">Honours and awards</h3>
+        <ul class="plain">
+          <li><strong>IDEA League Challenge Programme (2025–2026).</strong> Full scholarship, one of 8 Politecnico di Milano students selected on academic merit. Study periods at ETH Zurich, TU Delft, RWTH Aachen and Chalmers.</li>
+          <li><strong>Summer School in Applied Geophysics, ETH Zurich (2025).</strong> Full scholarship, one of 5 Politecnico di Milano students selected on academic merit.</li>
+          <li><strong>Carlo Sacchi Future Talent Award.</strong> Funded my research period at NASA JPL.</li>
+          <li><strong>“Ing. Roberto Rocca” Scholarship.</strong> Top 6 MSc engineering students at Politecnico di Milano (May 2025).</li>
+          <li><strong>“Ing. Aurelio Beltrami” Scholarship.</strong> Top MSc and BSc engineering students at Politecnico di Milano.</li>
+          <li><strong>LeadTheFuture Mentorship Programme (since Sep 2025).</strong> Selective STEM mentorship with mentors from global innovation hubs.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
+    <!-- Skills -->
+    <section class="sec" id="skills">
+      <h2>Skills</h2>
+      <div class="sec-body">
+        <dl class="skills">
+          <div><dt>Tools</dt><dd>MATLAB, Simulink, Python, C, ROS 2, Gazebo, Docker, PyTorch, Abaqus, Git, Linux</dd></div>
+          <div><dt>Methods</dt><dd>Control systems design, state estimation (KF, EKF), system identification, experimental modal analysis, Bayesian optimisation, SLAM, path planning, deep neural networks, reinforcement learning, model order reduction, digital signal processing</dd></div>
+          <div><dt>Languages</dt><dd>Italian (native), English (IELTS 7.5, C1)</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Beyond the lab -->
+    <section class="sec" id="beyond">
+      <h2>Beyond the lab</h2>
+      <div class="sec-body">
+        <!-- Add your photos in assets/ with these names. Without a photo, the tile stays light grey. -->
+        <div class="tiles">
+          <article class="tile tile-drone"><div><h3>Drones</h3><p>A custom-built drone for aerial video, including real estate work for agencies.</p></div></article>
+          <article class="tile tile-photo"><div><h3>Photography</h3><p>Landscapes and travel.</p></div></article>
+          <article class="tile tile-hike"><div><h3>Hiking</h3><p>Long days on the trail.</p></div></article>
+          <article class="tile tile-arduino"><div><h3>Making things</h3><p>Small Arduino builds, like the self-balancing robot.</p></div></article>
+        </div>
+        <p class="aside">I also enjoy reading and music. In high school I took part in the Mathematics Olympiad, and I have volunteered at Villaggio del Fanciullo in Morosolo, helping with activities for children and teenagers.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec" id="contact">
       <h2>Contact</h2>
-      <div class="contact-panel">
-        <p class="contact-lead">Working on telescopes, robots or something in between? I'd like to hear about it.</p>
-        <a class="btn btn-solid btn-big" href="mailto:YOUR_EMAIL@example.com">Send an email</a>
-        <ul class="contact-links">
-          <li><a href="https://www.linkedin.com/in/YOUR-HANDLE" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/YOUR-USERNAME" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.instagram.com/YOUR-HANDLE" rel="noopener">Instagram</a></li>
+      <div class="sec-body">
+        <p class="contact-lead">Interested in working together or just curious about a project? Write to me.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:francesco.pisacane@mail.polimi.it">francesco.pisacane@mail.polimi.it</a></li>
+          <li><span>GitHub</span><a href="https://github.com/FrancescoPisacane" rel="noopener">github.com/FrancescoPisacane</a></li>
+          <li><span>Based in</span><p>Varese, Italy</p></li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> Francesco. Built by hand, hosted on GitHub Pages.</p>
+    <p>© <span id="year">2026</span> Francesco Pisacane</p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
