@@ -830,3 +830,4 @@ body:has(#home)::before { inset: 0; }
 .rgt:hover .more, .rgt.is-open .more { max-height: 300px; }
 .rgt img { height: 120px; }
 .rgwrap { padding-bottom: 110px; }
+.intro { display: none !important; }

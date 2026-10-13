@@ -9,7 +9,7 @@
   function drop() { if (intro && intro.parentNode) intro.parentNode.removeChild(intro); }
 
   var seen = false;
-  try { seen = sessionStorage.getItem("introSeen") === "1"; } catch (e) {}
+  seen = true; // the opening flight is switched off: the home page shows straight away
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!intro || reduce || seen || !window.THREE || !window.Globe || !window.PLACES) {
