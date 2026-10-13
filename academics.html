@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academy · Francesco Pisacane</title>
+  <meta name="description" content="Academy of Francesco Pisacane: Politecnico di Milano, Ghent, the IDEA League universities and NASA JPL.">
+  <meta name="theme-color" content="#fbfbfd">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1d1f'/%3E%3Ctext x='16' y='22' font-size='15' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23fbfbfd'%3EFP%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="index.html"><span class="full">Francesco Pisacane</span><span class="short">FP</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html" aria-current="page">Academy</a></li>
+        <li><a href="life.html">Life</a></li>
+        <li><a href="downloads.html">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>Academy</h1>
+      <p>From Varese to Pasadena, with a few stops in between.</p>
+    </div>
+
+    <div class="acad">
+      <div class="map">
+        <canvas id="map-canvas"></canvas>
+        <div class="pop map-pop" id="map-pop"><p class="pop-city"></p><p class="pop-title"></p><img class="pop-img" alt="" hidden>
+      <p class="pop-note"></p></div>
+        <p class="map-hint">Drag to rotate. Hover a title to zoom in.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="t-item" data-place="milano">
+          <p class="t-when">Sep 2024 – present · Milan, Italy</p>
+          <h3>Politecnico di Milano, MSc</h3>
+          <p>Mechatronics and Robotics, Mechanical Engineering. GPA 29.9/30.</p>
+        </li>
+
+        <li class="t-item" data-place="pasadena">
+          <p class="t-when">Mar 2026 – Sep 2026 · Pasadena, USA</p>
+          <h3>NASA Jet Propulsion Laboratory</h3>
+          <p>Selected for a seven-month research period for my master's thesis on modelling, dynamics and control of distributed planetary vehicles, funded by the Carlo Sacchi Future Talent Award.</p>
+        </li>
+
+        <li class="t-item">
+          <p class="t-when">2025–2026 · Four universities, one programme</p>
+          <h3>IDEA League Challenge Programme</h3>
+          <ul class="unis">
+            <li data-place="delft"><b>TU Delft</b> Netherlands</li>
+            <li data-place="aachen"><b>RWTH Aachen</b> Germany</li>
+            <li data-place="gothenburg"><b>Chalmers</b> Sweden</li>
+            <li data-place="zurich"><b>ETH Zurich</b> Switzerland</li>
+          </ul>
+          <p class="t-group">International honours programme.</p>
+        </li>
+
+        <li class="t-item" data-place="ghent">
+          <p class="t-when">Sep 2025 – Jan 2026 · Ghent, Belgium</p>
+          <h3>Ghent University</h3>
+          <p>Exchange programme in Electromechanical Engineering.</p>
+        </li>
+
+        <li class="t-item" data-place="zurich">
+          <p class="t-when">Jun – Jul 2025 · Zurich, Switzerland</p>
+          <h3>ETH Zurich</h3>
+          <p>Summer School in Applied Geophysics: lectures and field activities on seismic and electromagnetic methods, joined through a merit-based scholarship.</p>
+        </li>
+
+        <li class="t-item" data-place="milano">
+          <p class="t-when">Sep 2021 – Jul 2024 · Milan, Italy</p>
+          <h3>Politecnico di Milano, BSc</h3>
+          <p>Automation and Control Engineering.</p>
+        </li>
+
+        <li class="t-item" data-place="varese">
+          <p class="t-when">Sep 2016 – Jul 2021 · Varese, Italy</p>
+          <h3>Applied Sciences High School</h3>
+          <p>Liceo Scientifico Galileo Ferraris, Varese. Diploma in applied sciences.</p>
+        </li>
+      </ol>
+    </div>
+
+    <section class="block">
+      <h2>Honours</h2>
+      <ul class="plain">
+        <li><strong>IDEA League Challenge Programme (2025–2026).</strong> Full scholarship, one of 8 Politecnico di Milano students selected on academic merit. A year-long international honours programme on global challenges, innovation and leadership.</li>
+        <li><strong>Summer School at ETH Zurich (2025).</strong> Full scholarship, one of 5 Politecnico di Milano students selected on academic merit.</li>
+        <li><strong>“Carlo Sacchi Future Talent Award” Scholarship.</strong> Funded my research period at NASA JPL.</li>
+        <li><strong>“Ing. Roberto Rocca” Scholarship.</strong> Top 6 MSc engineering students at Politecnico di Milano (May 2025).</li>
+        <li><strong>“Ing. Aurelio Beltrami” Scholarship.</strong> Awarded twice to top engineering students: during my BSc (Dec 2021) and my MSc (2026).</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Beyond classes</h2>
+      <ul class="assoc">
+        <li>
+          <span class="badge" data-logo="assets/logo-ltf.png"><b>LTF</b></span>
+          <div><strong><a class="ext" href="https://leadthefuture.tech/" target="_blank" rel="noopener">LeadTheFuture Mentorship Programme</a></strong><span>Since Sep 2025 · Highly selective STEM mentorship programme with a 13% acceptance rate, pairing students with mentors working in global innovation hubs for one-on-one guidance on career and research.</span></div>
+        </li>
+        <li>
+          <span class="badge" data-logo="assets/logo-jemp.png"><b>JEMP</b></span>
+          <div><strong><a class="ext" href="https://jemp.it/" target="_blank" rel="noopener">Junior Enterprise Milano Politecnico</a></strong><span>Since 2024 · Member of the audit team.</span></div>
+        </li>
+        <li>
+          <span class="badge" data-logo="assets/logo-aea.png"><b>AEA</b></span>
+          <div><strong><a class="ext" href="https://www.aeapolimi.it/" target="_blank" rel="noopener">Automation Engineering Association</a></strong><span>Since 2021 · Member of the project team.</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Skills</h2>
+      <ul class="plain">
+        <li><strong>Tools.</strong> MATLAB, Simulink, Python, C, ROS 2, Gazebo, Docker, PyTorch, Abaqus, Git, Linux.</li>
+        <li><strong>Methods.</strong> Control systems design, state estimation, system identification, experimental modal analysis, Bayesian optimisation, SLAM, reinforcement learning, model order reduction, digital signal processing.</li>
+        <li><strong>Languages.</strong> Italian (native), English (IELTS 7.5, C1).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year">2026</span> Francesco Pisacane</p>
+    <ul>
+      <li><a href="https://github.com/FrancescoPisacane" rel="noopener">GitHub</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="land.js"></script>
+  <script src="places.js"></script>
+  <script src="globe.js"></script>
+  <script src="academics.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Francesco Pisacane</title>
+  <meta name="description" content="Download the CV and transcript of records of Francesco Pisacane.">
+  <meta name="theme-color" content="#fbfbfd">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1d1f'/%3E%3Ctext x='16' y='22' font-size='15' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23fbfbfd'%3EFP%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="index.html"><span class="full">Francesco Pisacane</span><span class="short">FP</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html">Academy</a></li>
+        <li><a href="life.html">Life</a></li>
+        <li><a href="downloads.html" aria-current="page">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>CV</h1>
+      <p>My CV and academic transcript, ready to download.</p>
+    </div>
+    <div class="dl">
+      <a href="assets/cv.pdf" download data-file><div>Curriculum vitae<small>PDF</small></div><span class="go">Download ↓</span></a>
+      <a href="assets/transcript-of-records.pdf" download data-file><div>Transcript of records<small>PDF · Politecnico di Milano</small></div><span class="go">Download ↓</span></a>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year">2026</span> Francesco Pisacane</p>
+    <ul>
+      <li><a href="https://github.com/FrancescoPisacane" rel="noopener">GitHub</a></li>
+    </ul>
+  </footer>
+
+  <script>Array.prototype.forEach.call(document.querySelectorAll("[data-file]"),function(a){fetch(a.getAttribute("href"),{method:"HEAD"}).then(function(r){if(!r.ok)throw 0}).catch(function(){a.classList.add("off");a.querySelector(".go").textContent="Coming soon"})})</script>
+  <script src="site.js"></script>
+</body>
+</html>
